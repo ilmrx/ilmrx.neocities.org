@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Varela+Round&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
+a {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 50px;
+  font-size: 40px;
+  font-family: 'Jaro', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  background-image: linear-gradient(to right,#734c0f, #121212, #734c0f);
+  border-radius: 8px;
+  color: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; 
+  font-size: inherit;
+  font-family: inherit;
+  z-index: 2; 
+  transition: text-shadow 0.4s;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 50px;
+  border: 5px solid white; 
+  border-radius: 10px; 
+  pointer-events: none; 
+  opacity: 0; 
+  z-index: 1; 
+  transition: opacity 0.4s;
+}
+
+a:hover::after {
+  opacity: 1; 
+}
+
+a:hover {
+  background-color: #ff5733; 
+  transform: scale(1.125, 1); 
+}
+
+.popular-tag {
+    position: absolute; 
+    top: 50%; 
+    left: 100%; 
+    transform: translate(10px, -50%); /* Adjust this for spacing */
+    display: flex; /* Changed from block to flex for center alignment */
+    align-items: center; 
+    justify-content: center; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    background: radial-gradient(circle, orange, yellow);
+    color: #fff; 
+    font-size: 20px; 
+    border: 2px solid white;
+    z-index: 3; 
+}
+
+
+      .list-container2 {
+      background-color: #242323; 
+      border: 12px solid #2e2e2e;
+      border-radius: 10px; 
+      padding: 20px; 
+      width: 300px; 
+      }
+      .list-container {
+      background-color: #242323; 
+      border: 12px solid #2e2e2e;
+      border-radius: 10px; 
+      padding: 20px; 
+      width: 600px; 
+      }
+
+      .list-container ul {
+      list-style-type: none; 
+      padding: 0; 
+      }
+
+      .list-container li {
+      color: white; 
+      margin-bottom: 10px; 
+      }
+      .list-container ul .adv-li {
+      display: inline-block;
+      vertical-align: middle;
+      color: white; 
+      margin-bottom: 10px; 
+      }
+      .list-container input[type="text"] {
+      margin-left: 10px; 
+        text-align: center;
+      }
+
+@keyframes rainbow {
+  0% { color: rgba(255, 0, 0, 1); }
+  10% { color: rgba(255, 154, 0, 1); }
+  20% { color: rgba(208, 222, 33, 1); }
+  30% { color: rgba(79, 220, 74, 1); }
+  40% { color: rgba(63, 218, 216, 1); }
+  50% { color: rgba(47, 201, 226, 1); }
+  60% { color: rgba(28, 127, 238, 1); }
+  70% { color: rgba(95, 21, 242, 1); }
+  80% { color: rgba(186, 12, 248, 1); }
+  90% { color: rgba(251, 7, 217, 1); }
+  100% { color: rgba(255, 0, 0, 1); }
+}
+
+@keyframes textShadowPulse {
+  0%, 100% { text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff; }
+  50% { text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #00ffff, 0 0 25px #00ffff, 0 0 30px #00ffff, 0 0 35px #00ffff; }
+}
+
+@keyframes scaleRotate {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(360deg); }
+}
+
+.rainbow-text {
+  animation: rainbow 3s infinite, textShadowPulse 2s infinite, scaleRotate 4s infinite;
+}
+
+#splash-text {
+  animation: rainbow 2s infinite, scaleRotate 4s infinite;
+  text-shadow: 
+    -2px -2px 0 black, 
+    2px -2px 0 black, 
+    -2px 2px 0 black, 
+    2px 2px 0 black;
+}
+
+#c {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+n {
+  font-family: "Comic Sans MS", cursive; 
+  font-size: 32px; 
+  color: yellow;
+  -webkit-background-clip: text;
+  text-align: center;
+  animation: rainbow 3s infinite, textShadowPulse 2s infinite, scaleRotate 4s infinite;
+  text-shadow: 
+    -2px -2px 0 black, 
+    2px -2px 0 black, 
+    -2px 2px 0 black, 
+    2px 2px 0 black;
+}
+
+      #developerModeBtn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      }
+
+      .developer-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #008CBA;
+      color: white;
+      border: none;
+      cursor: pointer;
+      }
+
+      #DevMode {
+      display: none;
+      }
+body {
+    color: white;
+    font-family: Verdana;
+    margin: 0;
+    background-color: #593701;
+    width: 100vw; 
+    height: 100vh; 
+    background-image: url("https://ilmrx.neocities.org/images/Background%20Loops/Coffee.png");
+    background-repeat: repeat;
+    background-size: 150px 150px; 
+    animation: slideDiagonal 6s linear infinite; 
+}
+
+@keyframes slideDiagonal {
+    from {
+        background-position: 0 0; 
+    }
+    to {
+        background-position: 150px 150px; 
+    }
+}
+
+      p {
+      display:block;
+      font-size: 30px;
+      font-family: Comic Sans MS;
+      text-align: center;
+      color: white;
+      text-shadow: #000000 1px 1px 5px;
+      border-radius: 6px
+}
+
+      .button-row {
+      display: flex;
+      justify-content: center; 
+      gap: 2px; 
+      margin: 0 ;
+      }
+      .customButton {
+        display: inline-block;
+      width: 5px; 
+      height: 5px; 
+      font-size: 5px;
+      font-family: inherit; 
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid #333;
+      border-radius: 5px;
+      background-color: #fff; 
+      color: white; 
+      box-shadow: none; 
+      text-shadow: none; 
+      padding: 0;
+}
+
+  input[type="text"] {
+  text-align: center;
+}
+
+      b {
+      display: block;
+      width: 400px;
+      height: 200px;
+      font-size: 40px;
+      font-family: Luckiest Guy;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      background-color: #121212;
+      color: white;
+      border: 40px;
+      border-color: #000000;
+      }
+      v {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 450px;
+      height: 100px;
+      font-size: 60px;
+      font-family: Bebas Neue;
+      margin: auto;
+      border-radius: 20px;
+      background-color: #FBC544;
+      color: #FFFFFF;
+      box-shadow: #FBC544 2px 2px 10px;
+      text-shadow: 0px 0px 10px #000000;
+      }
+      f {
+      display: block;
+      text-align: center;
+      width: auto;
+      height: 50px;
+      font-size: 40px;
+      font-family: Varela Round;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      background-color: #2e2e2e;
+      color: #FFFFFF;
+      border: 40px;
+      border-color: #000000;
+      border-width: 10px;
+      }
+
+      input {
+  display: block;
+  justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      max-width: 700px;
+  text-align: center;
+      height: 40px;
+      font-size: 20px;
+      font-family: Comic Sans MS;
+      border-radius: 15px;
+      background-color: #121212;
+      color: white;
+      border: 40px;
+      border-color: #000000;
+      }
+              input[type="color"] {
+            border-style: dotted;
+            border: 10px;
+            outline: none; 
+        }
+      img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      div{
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      hr.rounded {
+      border-top: 8px solid #bbb;
+      border-radius: 5px;
+      }
+      .divider {
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      }
+      .trail {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      background-color: #ffffff;
+      text-shadow: 0 0 10px #000000;
+      border-radius: 15px;
+      pointer-events: none;
+      }
+      .container {
+      display: flex;
+      justify-content: center; 
+      height: 35vh; 
+      }
+      .divider::before, .divider::after {
+      flex: 1;
+      content: '';
+      padding: 3px;
+      background-color: red;
+      margin: 5px;
+      }
+      #cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      }
+      #Text {
+      display:block }
+      #willshowlater {
+      display:none }
+      #alertBox {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #f8d7da;
+      color: #721c24;
+      }
+      #colorPicker {
+      width: 200px;
+      margin-bottom: 20px;
+      }
+      #userTag {
+      margin: auto;
+      text-align: center;
+      font-family: Roboto;
+      }
+      ul {
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      }
+      li {
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      font-family: Roboto;
+      }
+      .secretButton {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      font-size: 5px;
+      font-family: inherit;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid #333;
+      border-radius: 5px;
+      background-color: #fff;
+      color: white;
+      box-shadow: none;
+      text-shadow: none;
+      }
+
+      img{
+      margin: 0 auto;
+      display:block;
+      }

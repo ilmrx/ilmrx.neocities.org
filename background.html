@@ -1,0 +1,49 @@
+<!-- 
+  ██╗██╗     ██╗     ██╗   ██╗███╗   ███╗███████╗██████╗ ██╗██╗  ██╗
+  ██║██║     ██║     ██║   ██║████╗ ████║██╔════╝██╔══██╗██║╚██╗██╔╝
+  ██║██║     ██║     ██║   ██║██╔████╔██║█████╗  ██████╔╝██║ ╚███╔╝ 
+  ██║██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗██║ ██╔██╗ 
+  ██║███████╗███████╗╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║██║██╔╝ ██╗
+  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
+                                                                    
+  ██████╗ ██╗      █████╗  ██████╗███████╗                          
+  ██╔══██╗██║     ██╔══██╗██╔════╝██╔════╝                          
+  ██████╔╝██║     ███████║██║     █████╗                            
+  ██╔═══╝ ██║     ██╔══██║██║     ██╔══╝                            
+  ██║     ███████╗██║  ██║╚██████╗███████╗   tickle pickle for nickel :DD
+  ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝                          
+  -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="/cloak.js"></script>
+    <script src="/rizz.js"></script>
+    <script src="/sha512.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="https://ilmrx.neocities.org/images/misc/favicon.png">
+<body>
+    <a onclick="Matcha()">Matcha</a>
+    <a onclick="Coffee()">Coffee</a>
+    <a onclick="Dragon()">Dragon</a>
+    <a onclick="GruvBox()">GruvBox</a>
+    <a onclick="Vampyro()">Vampyro</a>
+    <a onclick="GitHub()">GitHub</a>
+    <a onclick="darkmode()">Dark Mode</a>
+<a onclick="handleColorChange()">Custom</a>
+<input type="color" id="themeColorPicker" oninput="handleColorChange()">
+<a onclick="hide()">Hide</a>
+<script>
+function hide() {
+  document.querySelectorAll("a").forEach(a => a.style.display = "none");
+  document.querySelectorAll("input").forEach(a => a.style.display = "none");
+}
+
+</script>
+    <script>
+      loadDevModeState();
+      displayRandomQuote();
+      loadTheme();
+    </script>
+   </body>
+</html>
